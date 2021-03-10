@@ -24,6 +24,8 @@ namespace microservice.Controllers
         [ApiVersion("1.0")]
         public IActionResult GetV1()
         {
+            _logger.LogInformation("Api V1");
+            _logger.LogError("Log error Api V1");
             return Ok(Resource.MSG_ONE);
         }
         [HttpGet]

@@ -1,0 +1,4 @@
+===> 03/10/2021 14:46:00 +07:00 Application Starting.
+===> 03/10/2021 14:46:02 +07:00 Failed to determine the https port for redirect.
+===> 03/10/2021 14:46:13 +07:00 Api V1
+===> 03/10/2021 14:46:13 +07:00 Log error Api V1
