@@ -4,7 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using microservice.Commands;
+using microservice.Models;
 using microservice.Properties;
+using microservice.Validators;
 
 namespace microservice.Controllers
 {
@@ -21,12 +24,16 @@ namespace microservice.Controllers
         }
 
         [HttpGet]
-        [ApiVersion("1.0")]
         public IActionResult GetV1()
         {
             _logger.LogInformation("Api V1");
             _logger.LogError("Log error Api V1");
             return Ok(Resource.MSG_ONE);
+        }
+        [HttpPost]
+        public IActionResult PostV1([FromBody] UserCreateCommand user)
+        {
+            return Ok(user);
         }
         [HttpGet]
         [ApiVersion("2.0")]

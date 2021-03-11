@@ -11,7 +11,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.EntityFrameworkCore;
+using microservice.Data;
+using microservice.Filters;
 
 namespace microservice
 {
@@ -27,7 +31,12 @@ namespace microservice
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("DbTest"));
+            services.AddControllers(opts =>
+            {
+                opts.Filters.Add<AsyncActionFilter>(); // Run after valid ok
+            })
+                .AddFluentValidation(opts => { opts.RegisterValidatorsFromAssemblyContaining<Startup>(); }); // Valid
             services.AddApiVersioning(config => { config.ReportApiVersions = true; });
             services.AddVersionedApiExplorer(opts =>
             {

@@ -1,0 +1,44 @@
+===> 03/11/2021 08:19:01 +07:00 Application Starting.
+===> 03/11/2021 08:19:05 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:21:41 +07:00 Application Starting.
+===> 03/11/2021 08:21:42 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:22:17 +07:00 Application Starting.
+===> 03/11/2021 08:22:19 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:23:34 +07:00 Application Starting.
+===> 03/11/2021 08:23:37 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:25:12 +07:00 Application Starting.
+===> 03/11/2021 08:25:14 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:36:06 +07:00 Application Starting.
+===> 03/11/2021 08:36:08 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:37:05 +07:00 Application Starting.
+===> 03/11/2021 08:37:07 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:37:57 +07:00 Application Starting.
+===> 03/11/2021 08:37:59 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:47:11 +07:00 Application Starting.
+===> 03/11/2021 08:47:13 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:48:01 +07:00 Application Starting.
+===> 03/11/2021 08:48:04 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:51:01 +07:00 Application Starting.
+===> 03/11/2021 08:51:02 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:51:58 +07:00 Application Starting.
+===> 03/11/2021 08:52:00 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:52:32 +07:00 Application Starting.
+===> 03/11/2021 08:52:34 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:53:33 +07:00 Application Starting.
+===> 03/11/2021 08:53:35 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:54:29 +07:00 Application Starting.
+===> 03/11/2021 08:54:31 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 08:55:29 +07:00 Application Starting.
+===> 03/11/2021 08:55:31 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 09:08:40 +07:00 Application Starting.
+===> 03/11/2021 09:08:42 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 09:11:23 +07:00 Application Starting.
+===> 03/11/2021 09:11:32 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 09:12:14 +07:00 Application Starting.
+===> 03/11/2021 09:12:16 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 09:20:46 +07:00 Application Starting.
+===> 03/11/2021 09:20:50 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 09:21:20 +07:00 Application Starting.
+===> 03/11/2021 09:21:22 +07:00 Failed to determine the https port for redirect.
+===> 03/11/2021 09:29:47 +07:00 Application Starting.
+===> 03/11/2021 09:29:49 +07:00 Failed to determine the https port for redirect.
