@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using microservice.Models;
+using UserService.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace microservice.Data
+namespace UserService.Data
 {
     public class AppDbContext : DbContext
     {

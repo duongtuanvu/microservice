@@ -5,12 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
-using microservice.Commands;
-using microservice.Models;
-using microservice.Properties;
-using microservice.Validators;
+using UserService.Commands;
+using UserService.Properties;
 
-namespace microservice.Controllers
+namespace UserService.Controllers
 {
     [ApiController]
     [ApiVersion("1.0")]

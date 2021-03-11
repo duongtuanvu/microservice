@@ -4553,9 +4553,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vu.dt99\\Desktop\\New folder\\microservice\\microservice\\microservice.csproj",
-      "projectName": "microservice",
-      "projectPath": "C:\\Users\\vu.dt99\\Desktop\\New folder\\microservice\\microservice\\microservice.csproj",
+      "projectUniqueName": "C:\\Users\\vu.dt99\\Desktop\\New folder\\microservice\\microservice\\UserService.csproj",
+      "projectName": "UserService",
+      "projectPath": "C:\\Users\\vu.dt99\\Desktop\\New folder\\microservice\\microservice\\UserService.csproj",
       "packagesPath": "C:\\Users\\vu.dt99\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\vu.dt99\\Desktop\\New folder\\microservice\\microservice\\obj\\",
       "projectStyle": "PackageReference",

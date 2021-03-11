@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using microservice.Models;
+using UserService.Models;
 
-namespace microservice.Commands
+namespace UserService.Commands
 {
     public class UserCreateCommand : IRequest<bool>
     {

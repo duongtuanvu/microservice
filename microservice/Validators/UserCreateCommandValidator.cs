@@ -4,10 +4,10 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using FluentValidation;
-using microservice.Commands;
-using microservice.Models;
+using UserService.Commands;
+using UserService.Models;
 
-namespace microservice.Validators
+namespace UserService.Validators
 {
     public class UserCreateCommandValidator : AbstractValidator<UserCreateCommand>
     {

@@ -10,7 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace microservice
+namespace UserService
 {
     public class Program
     {

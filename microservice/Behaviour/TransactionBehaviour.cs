@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
-using microservice.Data;
+using UserService.Data;
 using Microsoft.Extensions.Logging;
 
-namespace microservice.Behaviour
+namespace UserService.Behaviour
 {
     public class TransactionBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {

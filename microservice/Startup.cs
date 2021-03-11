@@ -14,14 +14,14 @@ using System.Threading.Tasks;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
-using microservice.Data;
-using microservice.Filters;
+using UserService.Data;
+using UserService.Filters;
 using System.Reflection;
 using MediatR;
 using FluentValidation;
-using microservice.Behaviour;
+using UserService.Behaviour;
 
-namespace microservice
+namespace UserService
 {
     public class Startup
     {

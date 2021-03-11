@@ -1,6 +1,6 @@
 using System;
 
-namespace microservice
+namespace UserService
 {
     public class WeatherForecast
     {
