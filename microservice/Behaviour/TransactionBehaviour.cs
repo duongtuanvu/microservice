@@ -27,6 +27,7 @@ namespace microservice.Behaviour
             {
                 _logger.LogInformation($"Start transaction Id {transaction.TransactionId} for {typeName}");
                 var response = await next();
+                _logger.LogInformation($"Commit transaction Id {transaction.TransactionId} for {typeName}");
                 await _db.SaveChangesAsync(cancellationToken);
                 await transaction.CommitAsync(cancellationToken);
                 _logger.LogInformation($"End transaction Id {transaction.TransactionId} for {typeName}");
@@ -35,7 +36,7 @@ namespace microservice.Behaviour
             catch (Exception e)
             {
                 await transaction.RollbackAsync(cancellationToken);
-                _logger.LogError($"Transaction Id {transaction.TransactionId} for {typeName} with Error: {e.Message}");
+                _logger.LogError($"Error transaction Id {transaction.TransactionId} for {typeName}: {e.Message}");
                 throw;
             }
         }

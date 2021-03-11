@@ -41,22 +41,28 @@ namespace microservice
             // AddControllers 
             services.AddControllers(opts =>
             {
+                // ActionFilter
                 opts.Filters.Add<AsyncActionFilter>(); // Run after valid ok
             })
+                // Add validator
                 .AddFluentValidation(opts => { opts.RegisterValidatorsFromAssemblyContaining<Startup>(); }); // Valid
             services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
 
             // Add MediatR
             services.AddMediatR(Assembly.GetExecutingAssembly());
+
+            // Add transactionBehaviour
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionBehaviour<,>));
 
-            //
+            // Add Apiversioning
             services.AddApiVersioning(config => { config.ReportApiVersions = true; });
             services.AddVersionedApiExplorer(opts =>
             {
                 opts.GroupNameFormat = "'v'VVV";
                 opts.SubstituteApiVersionInUrl = true;
             });
+
+            // Add swagger
             services.AddSwaggerGen(
                 opts =>
                 {
@@ -120,7 +126,7 @@ namespace microservice
                 // build a swagger endpoint for each discovered API version
                 foreach (var description in provider.ApiVersionDescriptions)
                 {
-                    opts.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", description.GroupName.ToUpperInvariant());
+                    opts.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", $"API {description.GroupName.ToUpperInvariant()}");
                 }
             });
         }
