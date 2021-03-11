@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
 using microservice.Commands;
 using microservice.Models;
 using microservice.Properties;
@@ -16,23 +17,24 @@ namespace microservice.Controllers
     [Route("api/v{version:apiVersion}")]
     public class WeatherForecastController : ControllerBase
     {
+        private readonly IMediator _mediatR;
         private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(IMediator mediatR, ILogger<WeatherForecastController> logger)
         {
+            _mediatR = mediatR;
             _logger = logger;
         }
 
         [HttpGet]
         public IActionResult GetV1()
         {
-            _logger.LogInformation("Api V1");
-            _logger.LogError("Log error Api V1");
             return Ok(Resource.MSG_ONE);
         }
         [HttpPost]
-        public IActionResult PostV1([FromBody] UserCreateCommand user)
+        public async Task<IActionResult> PostV1([FromBody] UserCreateCommand user)
         {
+            await _mediatR.Send(user);
             return Ok(user);
         }
         [HttpGet]

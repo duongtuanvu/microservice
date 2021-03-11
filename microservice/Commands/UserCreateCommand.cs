@@ -15,9 +15,9 @@ namespace microservice.Commands
 
     public class UserCreateCommandHandler : IRequestHandler<UserCreateCommand, bool>
     {
-        public Task<bool> Handle(UserCreateCommand request, CancellationToken cancellationToken)
+        public async Task<bool> Handle(UserCreateCommand request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

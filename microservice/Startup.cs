@@ -16,6 +16,10 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 using microservice.Data;
 using microservice.Filters;
+using System.Reflection;
+using MediatR;
+using FluentValidation;
+using microservice.Behaviour;
 
 namespace microservice
 {
@@ -31,12 +35,22 @@ namespace microservice
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add AddDbContext
             services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("DbTest"));
+
+            // AddControllers 
             services.AddControllers(opts =>
             {
                 opts.Filters.Add<AsyncActionFilter>(); // Run after valid ok
             })
                 .AddFluentValidation(opts => { opts.RegisterValidatorsFromAssemblyContaining<Startup>(); }); // Valid
+            services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
+
+            // Add MediatR
+            services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionBehaviour<,>));
+
+            //
             services.AddApiVersioning(config => { config.ReportApiVersions = true; });
             services.AddVersionedApiExplorer(opts =>
             {
